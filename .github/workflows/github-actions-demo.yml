@@ -17,11 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         name: Checkout self
-        
-      - name: "Directory Listing"
-        run: "ls . -l"
 
-      - name: React build
+      - name: NPM Install and Build
         run: |
           cd my-app
+          npm i
           npm run build
