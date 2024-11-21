@@ -28,3 +28,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           retention-days: 1
+          path: "${{ github.sha }}-WEB.zip"
