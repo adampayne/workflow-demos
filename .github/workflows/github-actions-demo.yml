@@ -24,6 +24,9 @@ jobs:
           npm i
           npm run build
 
+      - name: "Directory Listing"
+        run: "ls . -l"
+
       - name: ZIP the WEB Artifact
         run: zip -r "${{ github.sha }}.zip" build
 
