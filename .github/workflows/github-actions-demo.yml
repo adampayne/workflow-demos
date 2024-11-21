@@ -26,8 +26,8 @@ jobs:
 
       - name: ZIP the WEB Artifact
         run: |
-          cd my-app
-          zip -r "${{ github.sha }}-WEB.zip" build
+          cd my-app/build
+          zip -r "${{ github.sha }}-WEB.zip" .
 
       - name: "Directory Listing"
         run: |
