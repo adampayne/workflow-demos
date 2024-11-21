@@ -39,4 +39,4 @@ jobs:
         with:
           retention-days: 1
           name: build
-          path: my-app/"${{ github.sha }}-WEB.zip"
+          path: ./my-app/${{ github.sha }}-WEB.zip
