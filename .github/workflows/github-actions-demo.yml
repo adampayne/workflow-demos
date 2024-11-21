@@ -24,12 +24,12 @@ jobs:
           npm i
           npm run build
 
-      - name: "Directory Listing"
-        run: "ls . -l"
-
       - name: ZIP the WEB Artifact
         run: |
           zip -r "${{ github.sha }}.zip" my-app/build
+
+      - name: "Directory Listing"
+        run: "ls . -l"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
