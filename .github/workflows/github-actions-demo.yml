@@ -1,0 +1,19 @@
+name: Build and deploy
+'on':
+  workflow_dispatch: null
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        name: Checkout self
