@@ -26,15 +26,17 @@ jobs:
 
       - name: ZIP the WEB Artifact
         run: |
-          cd my-app/build
-          zip -r "${{ github.sha }}-WEB.zip" .
+          cd my-app
+          zip -r "${{ github.sha }}-WEB.zip" build
 
       - name: "Directory Listing"
-        run: "ls . -l"
+        run: |
+          cd my-app
+          ls . -l
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           retention-days: 1
           name: build
-          path: "${{ github.sha }}-WEB.zip"
+          path: my-app/"${{ github.sha }}-WEB.zip"
