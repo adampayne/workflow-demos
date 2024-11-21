@@ -31,7 +31,7 @@ jobs:
 
       - name: "Directory Listing"
         run: |
-          cd my-app
+          cd my-app/build
           ls . -l
 
       - name: Upload Artifact
@@ -39,4 +39,4 @@ jobs:
         with:
           retention-days: 1
           name: build
-          path: ./my-app/${{ github.sha }}-WEB.zip
+          path: ./my-app/build/${{ github.sha }}-WEB.zip
