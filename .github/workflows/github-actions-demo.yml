@@ -24,6 +24,9 @@ jobs:
           npm i
           npm run build
 
+      - name: ZIP the WEB Artifact
+        run: zip -r "${{ github.sha }}.zip" build*
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
