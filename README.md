@@ -15,7 +15,7 @@ This launches on http://localhost:3000/
 Make the workflow file
 ./github/workflows/github-actions-demo.yml
 
-The below content will create a workflow that simply checks out the current code
+The below content will create a workflow that simply checks out the current code each time main is updated
 ```
 name: Build and deploy
 'on':
